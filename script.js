@@ -7,7 +7,7 @@ const orderButton = document.getElementById("order_button");
 const audio = new Audio("sound.mp3");
 
 const imgChange = () => {
-    if(mode.src.includes("icons/paper-cup.png")) {
+    if(mode.src.endsWith("icons/paper-cup.png")) {
         mode.src = "icons/coffee-cup.png";
         Body.style.backgroundColor = "rgb(48, 38, 25)";
     } else {
@@ -19,7 +19,7 @@ const imgChange = () => {
 mode.onclick = imgChange;
 
 const cartChange = () => {
-    if(cart.src.includes("icons/shopping-bag.png")) {
+    if(cart.src.endsWith("icons/shopping-bag.png")) {
         cart.src = "icons/shopping-bag2.png";
         cartContainer.style.display = 'block';
     } else {
